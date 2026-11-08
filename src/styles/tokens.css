@@ -1,0 +1,172 @@
+/* ============================================
+   LOOKUP — Pixel Design Tokens
+   8-bit / pixel-art design system
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ── Core Palette ── */
+  --ink:       #1B1B2F;
+  --paper:     #F4EEDC;
+  --surface:   #FFFFFF;
+  --accent:    #FF5D73;
+  --accent-2:  #3DDC97;
+  --sky:       #4DA3FF;
+  --sun:       #FFD23F;
+  --grape:     #8E5BFF;
+  --muted:     #6B6A7C;
+  --danger:    #E63946;
+
+  /* Extended 16-color palette */
+  --color-01: #1B1B2F;
+  --color-02: #F4EEDC;
+  --color-03: #FFFFFF;
+  --color-04: #FF5D73;
+  --color-05: #3DDC97;
+  --color-06: #4DA3FF;
+  --color-07: #FFD23F;
+  --color-08: #8E5BFF;
+  --color-09: #6B6A7C;
+  --color-10: #E63946;
+  --color-11: #FF9F1C;
+  --color-12: #2EC4B6;
+  --color-13: #CBFF8C;
+  --color-14: #FF6B9D;
+  --color-15: #C9B1FF;
+  --color-16: #A8DADC;
+
+  /* ── Pixel Grid ── */
+  --unit:    4px;
+  --unit-2:  8px;
+  --unit-3:  12px;
+  --unit-4:  16px;
+  --unit-6:  24px;
+  --unit-8:  32px;
+
+  /* ── Borders & Shadows ── */
+  --border-width: 3px;
+  --border:       3px solid var(--ink);
+  --shadow-sm:    3px 3px 0 var(--ink);
+  --shadow:       4px 4px 0 var(--ink);
+  --shadow-lg:    6px 6px 0 var(--ink);
+  --shadow-accent: 4px 4px 0 var(--accent);
+
+  /* ── Typography ── */
+  --font-pixel:  'Press Start 2P', 'Pixelify Sans', monospace;
+  --font-alt:    'Pixelify Sans', monospace;
+  --font-mono:   'VT323', monospace;
+  --font-body:   system-ui, -apple-system, sans-serif;
+
+  --text-xs:   10px;
+  --text-sm:   13px;
+  --text-base: 16px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  48px;
+
+  /* ── Spacing ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── Transitions (stepped / pixel feel) ── */
+  --transition: all 0.1s steps(2);
+  --transition-fast: all 0.05s steps(1);
+
+  /* ── Page layout ── */
+  --page-max-width: 480px;
+  --app-sidebar-width: 240px;
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --paper:   #14142B;
+  --surface: #22223F;
+  --ink:     #F4EEDC;
+  --muted:   #9999AA;
+  --border:  3px solid #F4EEDC;
+  --shadow:  4px 4px 0 #F4EEDC;
+}
+
+/* ── Theme: Neon Night ── */
+[data-theme="neon-night"] {
+  --paper:   #0A0A1A;
+  --surface: #12122A;
+  --ink:     #00FFD1;
+  --accent:  #FF00AA;
+  --accent-2:#00FFD1;
+  --sky:     #AA00FF;
+  --border:  3px solid #00FFD1;
+  --shadow:  4px 4px 0 #FF00AA;
+}
+
+/* ── Theme: Forest ── */
+[data-theme="forest"] {
+  --paper:   #1A2B1A;
+  --surface: #243324;
+  --ink:     #CBFF8C;
+  --accent:  #3DDC97;
+  --accent-2:#FFD23F;
+  --border:  3px solid #CBFF8C;
+  --shadow:  4px 4px 0 #3DDC97;
+}
+
+/* ── Theme: Candy ── */
+[data-theme="candy"] {
+  --paper:   #FFF0F5;
+  --surface: #FFFFFF;
+  --ink:     #3D1A3D;
+  --accent:  #FF6B9D;
+  --accent-2:#C9B1FF;
+  --sky:     #A8DADC;
+  --border:  3px solid #3D1A3D;
+  --shadow:  4px 4px 0 #FF6B9D;
+}
+
+/* ── Theme: Ocean ── */
+[data-theme="ocean"] {
+  --paper:   #0A1628;
+  --surface: #0F2040;
+  --ink:     #A8DADC;
+  --accent:  #4DA3FF;
+  --accent-2:#2EC4B6;
+  --border:  3px solid #A8DADC;
+  --shadow:  4px 4px 0 #4DA3FF;
+}
+
+/* ── Theme: Sunset ── */
+[data-theme="sunset"] {
+  --paper:   #2B1A0A;
+  --surface: #3D2510;
+  --ink:     #FFD23F;
+  --accent:  #FF9F1C;
+  --accent-2:#FF5D73;
+  --border:  3px solid #FFD23F;
+  --shadow:  4px 4px 0 #FF9F1C;
+}
+
+/* ── Theme: Grape ── */
+[data-theme="grape"] {
+  --paper:   #1A0A2B;
+  --surface: #25103D;
+  --ink:     #C9B1FF;
+  --accent:  #8E5BFF;
+  --accent-2:#FF5D73;
+  --border:  3px solid #C9B1FF;
+  --shadow:  4px 4px 0 #8E5BFF;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
