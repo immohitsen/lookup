@@ -1,172 +1,141 @@
 /* ============================================
-   LOOKUP — Pixel Design Tokens
-   8-bit / pixel-art design system
+   LOOKUP — Ultra-Luxury Editorial Design Tokens
+   Typography: Plus Jakarta Sans (Standard Premium Sans)
+   Strict 5-Color Palette:
+   - Honey Bronze:    #E09F3E
+   - Vanilla Custard: #FFF3B0
+   - Night Bordeaux:  #540B0E
+   - Dark Slate Grey: #335C67
+   - Brown Red:       #9E2A2B
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
-
 :root {
-  /* ── Core Palette ── */
-  --ink:       #1B1B2F;
-  --paper:     #F4EEDC;
-  --surface:   #FFFFFF;
-  --accent:    #FF5D73;
-  --accent-2:  #3DDC97;
-  --sky:       #4DA3FF;
-  --sun:       #FFD23F;
-  --grape:     #8E5BFF;
-  --muted:     #6B6A7C;
-  --danger:    #E63946;
+  /* ── 5 Strict Palette Colors ── */
+  --honey-bronze:    #E09F3E; /* Honey Bronze (Primary Accent / CTAs) */
+  --vanilla-custard: #FFF3B0; /* Vanilla Custard (Luminous Cream) */
+  --night-bordeaux:  #540B0E; /* Night Bordeaux (Deep Rich Wine) */
+  --dark-slate-grey: #335C67; /* Dark Slate Grey (Cool Petroleum Slate) */
+  --brown-red:       #9E2A2B; /* Brown Red (Terracotta Crimson) */
 
-  /* Extended 16-color palette */
-  --color-01: #1B1B2F;
-  --color-02: #F4EEDC;
-  --color-03: #FFFFFF;
-  --color-04: #FF5D73;
-  --color-05: #3DDC97;
-  --color-06: #4DA3FF;
-  --color-07: #FFD23F;
-  --color-08: #8E5BFF;
-  --color-09: #6B6A7C;
-  --color-10: #E63946;
-  --color-11: #FF9F1C;
-  --color-12: #2EC4B6;
-  --color-13: #CBFF8C;
-  --color-14: #FF6B9D;
-  --color-15: #C9B1FF;
-  --color-16: #A8DADC;
+  /* ── Hybrid Canvas Modes ── */
+  /* Light Mode (Vanilla Custard Editorial Canvas) */
+  --paper-light:     #FAF7EE; /* Warm Vanilla Custard Paper */
+  --surface-light:   #FFFFFF; /* Pure White Elevation */
+  --surface-hover-l: #F5EFE0;
+  --ink-dark:        #540B0E; /* Night Bordeaux Deep Headline Text */
+  --ink-body-dark:   #25150E; /* Deep Warm Espresso Body */
+  --muted-dark:      #766050; /* Warm Earth Muted */
+  --border-light:    rgba(84, 11, 14, 0.12);
 
-  /* ── Pixel Grid ── */
-  --unit:    4px;
-  --unit-2:  8px;
-  --unit-3:  12px;
-  --unit-4:  16px;
-  --unit-6:  24px;
-  --unit-8:  32px;
+  /* Dark Mode (Night Bordeaux & Velvet Noir Canvas) */
+  --paper-dark:      #140305; /* Deep Bordeaux Noir */
+  --surface-dark:    #220609; /* Elevated Bordeaux Surface */
+  --surface-hover-d: #30090D;
+  --ink-light:       #FFF3B0; /* Vanilla Custard Glowing Text */
+  --muted-light:     #D5C99E; /* Warm Muted Custard */
+  --border-dark:     rgba(255, 243, 176, 0.15);
 
-  /* ── Borders & Shadows ── */
-  --border-width: 3px;
-  --border:       3px solid var(--ink);
-  --shadow-sm:    3px 3px 0 var(--ink);
-  --shadow:       4px 4px 0 var(--ink);
-  --shadow-lg:    6px 6px 0 var(--ink);
-  --shadow-accent: 4px 4px 0 var(--accent);
+  /* Active Semantic Defaults (Hybrid Mode) */
+  --paper:        var(--paper-light);
+  --surface:      var(--surface-light);
+  --surface-hover:var(--surface-hover-l);
+  --ink:          var(--ink-dark);
+  --muted:        var(--muted-dark);
+  --accent:       var(--honey-bronze);
+  --accent-ink:   #230E01; /* High-contrast text on Honey Bronze */
+  --accent-2:     var(--dark-slate-grey);
+  --accent-red:   var(--brown-red);
+  --bordeaux:     var(--night-bordeaux);
 
-  /* ── Typography ── */
-  --font-pixel:  'Press Start 2P', 'Pixelify Sans', monospace;
-  --font-alt:    'Pixelify Sans', monospace;
-  --font-mono:   'VT323', monospace;
-  --font-body:   system-ui, -apple-system, sans-serif;
+  --border-color: rgba(84, 11, 14, 0.12);
+  --border:       1px solid rgba(84, 11, 14, 0.12);
+  --border-bold:  2px solid rgba(224, 159, 62, 0.45);
+  --border-accent:1px solid #E09F3E;
 
-  --text-xs:   10px;
-  --text-sm:   13px;
-  --text-base: 16px;
-  --text-lg:   20px;
-  --text-xl:   24px;
-  --text-2xl:  32px;
-  --text-3xl:  48px;
+  /* Modern Smooth Shadows */
+  --shadow-sm:    0 2px 6px rgba(84, 11, 14, 0.06);
+  --shadow:       0 8px 24px -4px rgba(84, 11, 14, 0.09);
+  --shadow-lg:    0 20px 40px -8px rgba(84, 11, 14, 0.14);
+  --shadow-accent:0 8px 24px rgba(224, 159, 62, 0.35);
 
-  /* ── Spacing ── */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-6:  24px;
-  --space-8:  32px;
-  --space-12: 48px;
-  --space-16: 64px;
+  /* Single Standard Premium Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* ── Transitions (stepped / pixel feel) ── */
-  --transition: all 0.1s steps(2);
-  --transition-fast: all 0.05s steps(1);
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.1s ease;
 
-  /* ── Page layout ── */
   --page-max-width: 480px;
-  --app-sidebar-width: 240px;
 }
 
-/* ── Dark mode ── */
-[data-theme="dark"] {
-  --paper:   #14142B;
-  --surface: #22223F;
-  --ink:     #F4EEDC;
-  --muted:   #9999AA;
-  --border:  3px solid #F4EEDC;
-  --shadow:  4px 4px 0 #F4EEDC;
+/* ── Palette Themes (Strictly from the 5 colors) ── */
+[data-theme="default"],
+[data-theme="bordeaux-honey"] {
+  --paper:   #140305;
+  --surface: #220609;
+  --ink:     #FFF3B0;
+  --muted:   #D5C99E;
+  --accent:  #E09F3E;
+  --accent-2:#335C67;
+  --border:  1px solid rgba(255, 243, 176, 0.15);
+  --shadow:  0 8px 28px rgba(224, 159, 62, 0.25);
 }
 
-/* ── Theme: Neon Night ── */
-[data-theme="neon-night"] {
-  --paper:   #0A0A1A;
-  --surface: #12122A;
-  --ink:     #00FFD1;
-  --accent:  #FF00AA;
-  --accent-2:#00FFD1;
-  --sky:     #AA00FF;
-  --border:  3px solid #00FFD1;
-  --shadow:  4px 4px 0 #FF00AA;
-}
-
-/* ── Theme: Forest ── */
-[data-theme="forest"] {
-  --paper:   #1A2B1A;
-  --surface: #243324;
-  --ink:     #CBFF8C;
-  --accent:  #3DDC97;
-  --accent-2:#FFD23F;
-  --border:  3px solid #CBFF8C;
-  --shadow:  4px 4px 0 #3DDC97;
-}
-
-/* ── Theme: Candy ── */
-[data-theme="candy"] {
-  --paper:   #FFF0F5;
+[data-theme="vanilla-custard"] {
+  --paper:   #FAF7EE;
   --surface: #FFFFFF;
-  --ink:     #3D1A3D;
-  --accent:  #FF6B9D;
-  --accent-2:#C9B1FF;
-  --sky:     #A8DADC;
-  --border:  3px solid #3D1A3D;
-  --shadow:  4px 4px 0 #FF6B9D;
+  --ink:     #540B0E;
+  --muted:   #766050;
+  --accent:  #E09F3E;
+  --accent-2:#335C67;
+  --border:  1px solid rgba(84, 11, 14, 0.12);
+  --shadow:  0 8px 28px rgba(84, 11, 14, 0.08);
 }
 
-/* ── Theme: Ocean ── */
+[data-theme="slate-grey"],
 [data-theme="ocean"] {
-  --paper:   #0A1628;
-  --surface: #0F2040;
-  --ink:     #A8DADC;
-  --accent:  #4DA3FF;
-  --accent-2:#2EC4B6;
-  --border:  3px solid #A8DADC;
-  --shadow:  4px 4px 0 #4DA3FF;
+  --paper:   #132227;
+  --surface: #1B3037;
+  --ink:     #FFF3B0;
+  --muted:   #A7BCC1;
+  --accent:  #E09F3E;
+  --accent-2:#335C67;
+  --border:  1px solid rgba(51, 92, 103, 0.35);
+  --shadow:  0 8px 28px rgba(51, 92, 103, 0.3);
 }
 
-/* ── Theme: Sunset ── */
+[data-theme="brown-red"],
+[data-theme="crimson-velvet"] {
+  --paper:   #1C0708;
+  --surface: #2E0C0E;
+  --ink:     #FFF3B0;
+  --muted:   #D4ACAD;
+  --accent:  #9E2A2B;
+  --accent-2:#E09F3E;
+  --border:  1px solid rgba(158, 42, 43, 0.35);
+  --shadow:  0 8px 28px rgba(158, 42, 43, 0.3);
+}
+
+[data-theme="night-bordeaux"],
+[data-theme="forest"] {
+  --paper:   #540B0E;
+  --surface: #3E0709;
+  --ink:     #FFF3B0;
+  --muted:   #D5C99E;
+  --accent:  #E09F3E;
+  --accent-2:#335C67;
+  --border:  1px solid rgba(224, 159, 62, 0.3);
+  --shadow:  0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="honey-amber"],
 [data-theme="sunset"] {
-  --paper:   #2B1A0A;
-  --surface: #3D2510;
-  --ink:     #FFD23F;
-  --accent:  #FF9F1C;
-  --accent-2:#FF5D73;
-  --border:  3px solid #FFD23F;
-  --shadow:  4px 4px 0 #FF9F1C;
-}
-
-/* ── Theme: Grape ── */
-[data-theme="grape"] {
-  --paper:   #1A0A2B;
-  --surface: #25103D;
-  --ink:     #C9B1FF;
-  --accent:  #8E5BFF;
-  --accent-2:#FF5D73;
-  --border:  3px solid #C9B1FF;
-  --shadow:  4px 4px 0 #8E5BFF;
-}
-
-/* ── Reduced Motion ── */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+  --paper:   #190C03;
+  --surface: #2B1506;
+  --ink:     #FFF3B0;
+  --muted:   #DAC39C;
+  --accent:  #E09F3E;
+  --accent-2:#9E2A2B;
+  --border:  1px solid rgba(224, 159, 62, 0.3);
+  --shadow:  0 8px 28px rgba(224, 159, 62, 0.3);
 }

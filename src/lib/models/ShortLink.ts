@@ -19,3 +19,4 @@ const ShortLinkSchema = new Schema<IShortLink>(
 );
 
 export const ShortLink = models.ShortLink || model<IShortLink>('ShortLink', ShortLinkSchema);
+

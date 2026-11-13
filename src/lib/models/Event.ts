@@ -33,3 +33,4 @@ EventSchema.index({ userId: 1, createdAt: -1 });
 EventSchema.index({ userId: 1, type: 1, createdAt: -1 });
 
 export const Event = models.Event || model<IEvent>('Event', EventSchema);
+

@@ -21,6 +21,8 @@ export interface ILink extends Document {
   thumbnail: string;
   config: Record<string, unknown>;
   clicks: number;
+  scheduledStart?: Date;
+  scheduledEnd?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -42,8 +44,11 @@ const LinkSchema = new Schema<ILink>(
     thumbnail: { type: String, default: '' },
     config: { type: Schema.Types.Mixed, default: {} },
     clicks: { type: Number, default: 0 },
+    scheduledStart: { type: Date },
+    scheduledEnd: { type: Date },
   },
   { timestamps: true }
 );
 
 export const Link = models.Link || model<ILink>('Link', LinkSchema);
+

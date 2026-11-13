@@ -19,3 +19,4 @@ const SubscriberSchema = new Schema<ISubscriber>(
 SubscriberSchema.index({ userId: 1, email: 1 }, { unique: true });
 
 export const Subscriber = models.Subscriber || model<ISubscriber>('Subscriber', SubscriberSchema);
+

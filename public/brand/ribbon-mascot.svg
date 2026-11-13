@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none" role="img" aria-label="Ribbon mascot">
+  <defs>
+    <linearGradient id="winBody" x1="18%" y1="8%" x2="82%" y2="96%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="42%" stop-color="#f7f8ff"/>
+      <stop offset="78%" stop-color="#e8ecff"/>
+      <stop offset="100%" stop-color="#dce8ff"/>
+    </linearGradient>
+    <linearGradient id="winSheen" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".9"/>
+      <stop offset="45%" stop-color="#c9d7ff" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#9ec4ff" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="ribbonGrad" x1="0%" y1="30%" x2="100%" y2="70%">
+      <stop offset="0%" stop-color="#7ec8ff"/>
+      <stop offset="35%" stop-color="#3b9dff"/>
+      <stop offset="70%" stop-color="#5bb2ff"/>
+      <stop offset="100%" stop-color="#8fd0ff"/>
+    </linearGradient>
+    <radialGradient id="eyeGrad" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#3a4d8a"/>
+      <stop offset="55%" stop-color="#1a2554"/>
+      <stop offset="100%" stop-color="#0d1433"/>
+    </radialGradient>
+    <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8eb5" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#ff8eb5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#5bb2ff" flood-opacity=".28"/>
+    </filter>
+    <filter id="ribbonGlow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <!-- left window -->
+    <g class="ribbon-win ribbon-win-left" transform="translate(28 28) rotate(-11 70 80)">
+      <rect width="140" height="150" rx="34" fill="url(#winBody)"/>
+      <rect width="140" height="150" rx="34" fill="url(#winSheen)" opacity=".85"/>
+      <rect x="10" y="10" width="120" height="46" rx="18" fill="#ffffff" opacity=".35"/>
+      <g transform="translate(22 22)">
+        <circle cx="0" cy="0" r="6.2" fill="#ff5f57"/>
+        <circle cx="0" cy="0" r="2.2" fill="#ffb0ab" opacity=".7"/>
+        <circle cx="18" cy="0" r="6.2" fill="#febc2e"/>
+        <circle cx="18" cy="0" r="2.2" fill="#ffe29a" opacity=".7"/>
+        <circle cx="36" cy="0" r="6.2" fill="#28c840"/>
+        <circle cx="36" cy="0" r="2.2" fill="#9aefab" opacity=".7"/>
+      </g>
+      <ellipse class="ribbon-eye" cx="88" cy="86" rx="18" ry="26" fill="url(#eyeGrad)"/>
+      <circle class="ribbon-catch" cx="81" cy="74" r="6.5" fill="#fff"/>
+      <circle class="ribbon-catch" cx="93" cy="70" r="3.2" fill="#fff" opacity=".75"/>
+      <g opacity=".9">
+        <ellipse cx="42" cy="108" rx="10" ry="5" fill="url(#blushGrad)" transform="rotate(-28 42 108)"/>
+        <ellipse cx="56" cy="118" rx="8" ry="4" fill="url(#blushGrad)" transform="rotate(-28 56 118)"/>
+      </g>
+    </g>
+
+    <!-- right window -->
+    <g class="ribbon-win ribbon-win-right" transform="translate(152 28) rotate(11 70 80)">
+      <rect width="140" height="150" rx="34" fill="url(#winBody)"/>
+      <rect width="140" height="150" rx="34" fill="url(#winSheen)" opacity=".85"/>
+      <rect x="10" y="10" width="120" height="46" rx="18" fill="#ffffff" opacity=".35"/>
+      <g transform="translate(22 22)">
+        <circle cx="0" cy="0" r="6.2" fill="#ff5f57"/>
+        <circle cx="0" cy="0" r="2.2" fill="#ffb0ab" opacity=".7"/>
+        <circle cx="18" cy="0" r="6.2" fill="#febc2e"/>
+        <circle cx="18" cy="0" r="2.2" fill="#ffe29a" opacity=".7"/>
+        <circle cx="36" cy="0" r="6.2" fill="#28c840"/>
+        <circle cx="36" cy="0" r="2.2" fill="#9aefab" opacity=".7"/>
+      </g>
+      <ellipse class="ribbon-eye" cx="52" cy="86" rx="18" ry="26" fill="url(#eyeGrad)"/>
+      <circle class="ribbon-catch" cx="45" cy="74" r="6.5" fill="#fff"/>
+      <circle class="ribbon-catch" cx="57" cy="70" r="3.2" fill="#fff" opacity=".75"/>
+      <g opacity=".9">
+        <ellipse cx="98" cy="108" rx="10" ry="5" fill="url(#blushGrad)" transform="rotate(28 98 108)"/>
+        <ellipse cx="84" cy="118" rx="8" ry="4" fill="url(#blushGrad)" transform="rotate(28 84 118)"/>
+      </g>
+    </g>
+
+    <!-- smile ribbon -->
+    <g class="ribbon-smile" filter="url(#ribbonGlow)">
+      <path
+        d="M118 148 C138 168 182 168 202 148 C196 172 166 186 160 186 C154 186 124 172 118 148 Z"
+        fill="url(#ribbonGrad)"
+        opacity=".96"
+      />
+      <path
+        d="M124 152 C142 168 178 168 196 152"
+        stroke="#e8f6ff"
+        stroke-width="3.5"
+        stroke-linecap="round"
+        opacity=".55"
+      />
+    </g>
+  </g>
+
+  <style>
+    .ribbon-eye {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ribbon-blink 4.8s ease-in-out infinite;
+    }
+    .ribbon-win-left {
+      transform-box: fill-box;
+      transform-origin: 70% 80%;
+      animation: ribbon-tilt-left 3.6s ease-in-out infinite;
+    }
+    .ribbon-win-right {
+      transform-box: fill-box;
+      transform-origin: 30% 80%;
+      animation: ribbon-tilt-right 3.6s ease-in-out infinite;
+    }
+    .ribbon-smile {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ribbon-pulse 2.8s ease-in-out infinite;
+    }
+    @keyframes ribbon-blink {
+      0%, 42%, 48%, 100% { transform: scaleY(1); }
+      45% { transform: scaleY(0.08); }
+    }
+    @keyframes ribbon-tilt-left {
+      0%, 100% { translate: 0 0; }
+      50% { translate: -1px 2px; }
+    }
+    @keyframes ribbon-tilt-right {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 1px 2px; }
+    }
+    @keyframes ribbon-pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.03); opacity: 0.95; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ribbon-eye, .ribbon-win-left, .ribbon-win-right, .ribbon-smile { animation: none; }
+    }
+  </style>
+</svg>

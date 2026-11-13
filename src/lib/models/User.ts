@@ -8,15 +8,21 @@ export interface IUser extends Document {
   avatarUrl: string;
   themeId: string;
   fontId: string;
-  bgType: 'solid' | 'dither' | 'tiled';
-  socialLinks: {
-    instagram?: string;
-    tiktok?: string;
-    youtube?: string;
-    twitter?: string;
-    linkedin?: string;
-    github?: string;
+  bgType: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  customColors?: {
+    bg?: string;
+    button?: string;
+    text?: string;
+    buttonStyle?: 'solid' | 'outline' | 'glass';
+    layoutStyle?: 'stack' | 'bento' | 'editorial';
+    cardGlow?: boolean;
+    proBadge?: boolean;
+    interfaceStyle?: string;
   };
+  socialPosition?: 'top' | 'bottom';
+  socialLinks: Record<string, string>;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -28,16 +34,26 @@ const UserSchema = new Schema<IUser>(
     name: { type: String, default: '' },
     bio: { type: String, default: '', maxlength: 160 },
     avatarUrl: { type: String, default: '' },
-    themeId: { type: String, default: 'default' },
-    fontId: { type: String, default: 'press-start' },
-    bgType: { type: String, enum: ['solid', 'dither', 'tiled'], default: 'solid' },
+    themeId: { type: String, default: 'bordeaux-honey' },
+    fontId: { type: String, default: 'plus-jakarta' },
+    bgType: { type: String, default: 'solid' },
+    seoTitle: { type: String, default: '' },
+    seoDescription: { type: String, default: '' },
+    customColors: {
+      bg: { type: String, default: '' },
+      button: { type: String, default: '' },
+      text: { type: String, default: '' },
+      buttonStyle: { type: String, enum: ['solid', 'outline', 'glass'], default: 'solid' },
+      layoutStyle: { type: String, enum: ['stack', 'bento', 'editorial'], default: 'stack' },
+      cardGlow: { type: Boolean, default: false },
+      proBadge: { type: Boolean, default: false },
+      interfaceStyle: { type: String, default: 'standard' },
+    },
+    socialPosition: { type: String, enum: ['top', 'bottom'], default: 'top' },
     socialLinks: {
-      instagram: String,
-      tiktok: String,
-      youtube: String,
-      twitter: String,
-      linkedin: String,
-      github: String,
+      type: Map,
+      of: String,
+      default: {},
     },
   },
   { timestamps: true }

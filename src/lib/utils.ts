@@ -26,6 +26,7 @@ export function detectDevice(ua: string): 'mobile' | 'tablet' | 'desktop' {
 export function normalizeUrl(url: string): string {
   if (!url) return '';
   url = url.trim();
+  if (url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('sms:')) return url;
   if (!/^https?:\/\//i.test(url)) return `https://${url}`;
   return url;
 }
@@ -59,3 +60,4 @@ export function getDateRange(range: '7d' | '30d' | 'all'): Date | null {
 export function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
+

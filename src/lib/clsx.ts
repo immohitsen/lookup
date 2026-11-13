@@ -1,0 +1,24 @@
+export type ClassValue = ClassArray | ClassDictionary | string | number | bigint | null | boolean | undefined;
+export type ClassDictionary = Record<string, unknown>;
+export type ClassArray = ClassValue[];
+
+export function clsx(...inputs: ClassValue[]): string {
+  const classes: string[] = [];
+  for (const input of inputs) {
+    if (!input) continue;
+    if (typeof input === 'string' || typeof input === 'number') {
+      classes.push(String(input));
+    } else if (Array.isArray(input)) {
+      const inner = clsx(...input);
+      if (inner) classes.push(inner);
+    } else if (typeof input === 'object') {
+      for (const [key, val] of Object.entries(input)) {
+        if (val) classes.push(key);
+      }
+    }
+  }
+  return classes.join(' ');
+}
+
+export default clsx;
+
