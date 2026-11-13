@@ -72,36 +72,36 @@ const FEATURES: FeatureCard[] = [
 
 export function EditorialFeatures() {
   return (
-    <section id="features" className="py-20 sm:py-28 bg-[#FAF7EE] border-b border-[#540B0E]/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 text-left">
+    <section id="features" className="py-14 sm:py-28 bg-[#FAF7EE] border-b border-[#540B0E]/10">
+      <div className="max-w-6xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-12 text-left">
         
         {/* Section Header */}
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <span className="text-[10px] sm:text-xs font-mono font-black uppercase tracking-wider text-[#E09F3E] flex items-center gap-1.5">
             <HugeiconsIcon icon={SparklesIcon} size={14} />
             // 05 CAPABILITIES ARCHITECTURE
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#540B0E] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#540B0E] tracking-tight">
             Designed for uncompromised autonomy.
           </h2>
-          <p className="text-sm sm:text-base text-[#766050] max-w-2xl font-medium leading-relaxed">
+          <p className="text-xs sm:text-base text-[#766050] max-w-2xl font-medium leading-relaxed">
             Every feature on Lookup is engineered to give creators aesthetic distinction and total independence — without paywalls, watermark badges, or middleman fees.
           </p>
         </div>
 
         {/* 6-Card Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {FEATURES.map((feat, idx) => {
             const Icon = feat.icon;
             return (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-3xl bg-white border border-[#540B0E]/12 shadow-sm space-y-4 hover:border-[#E09F3E]/60 transition-all flex flex-col justify-between group"
+                className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-[#540B0E]/12 shadow-sm space-y-4 hover:border-[#E09F3E]/60 transition-all flex flex-col justify-between group"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="w-11 h-11 rounded-2xl bg-[#FAF7EE] border border-[#540B0E]/12 flex items-center justify-center text-[#540B0E] group-hover:scale-105 transition-transform shadow-2xs">
-                      <HugeiconsIcon icon={Icon} size={20} className="text-[#540B0E]" />
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#FAF7EE] border border-[#540B0E]/12 flex items-center justify-center text-[#540B0E] group-hover:scale-105 transition-transform shadow-2xs">
+                      <HugeiconsIcon icon={Icon} size={18} className="text-[#540B0E]" />
                     </div>
                     <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#FAF7EE] text-[#540B0E] border border-[#540B0E]/10">
                       {feat.badge}
@@ -112,7 +112,7 @@ export function EditorialFeatures() {
                     <span className={`text-[10px] font-mono font-black uppercase tracking-wider ${feat.tagColor}`}>
                       {feat.kicker}
                     </span>
-                    <h3 className="text-lg font-black text-[#540B0E] mt-0.5 tracking-tight">
+                    <h3 className="text-base sm:text-lg font-black text-[#540B0E] mt-0.5 tracking-tight">
                       {feat.title}
                     </h3>
                   </div>
@@ -132,16 +132,16 @@ export function EditorialFeatures() {
         </div>
 
         {/* Bottom Editorial Trust Bar */}
-        <div className="p-5 rounded-2xl bg-white border border-[#540B0E]/10 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#766050]">
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#540B0E]/10 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs font-mono text-[#766050] text-center sm:text-left">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
             <span className="font-bold text-[#540B0E]">100% FREE CREATOR TOOLKIT</span>
           </div>
-          <div className="flex items-center gap-4 text-[11px]">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-[11px]">
             <span>NO CREDIT CARD REQUIRED</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>0% FEES TAKEN</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>INSTANT DEPLOYMENT</span>
           </div>
         </div>

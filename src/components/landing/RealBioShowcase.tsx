@@ -122,26 +122,26 @@ export function RealBioShowcase() {
   const [selectedCreator, setSelectedCreator] = useState<CreatorBio>(REAL_CREATORS[0]);
 
   return (
-    <section id="showcase" className="py-16 sm:py-24 bg-[#FAF7EE] border-b border-[#540B0E]/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-10">
+    <section id="showcase" className="py-14 sm:py-24 bg-[#FAF7EE] border-b border-[#540B0E]/10">
+      <div className="max-w-6xl mx-auto px-3.5 sm:px-6 space-y-6 sm:space-y-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-[#540B0E]/10 text-left">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-2 border-b border-[#540B0E]/10 text-left">
           <div className="space-y-2">
             <span className="text-[10px] sm:text-xs font-mono font-black uppercase tracking-wider text-[#E09F3E] flex items-center gap-1.5">
               <HugeiconsIcon icon={SparklesIcon} size={14} />
               // 02 REAL BIO PAGES
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#540B0E] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#540B0E] tracking-tight">
               Crafted by real creators.
             </h2>
-            <p className="text-sm sm:text-base text-[#766050] max-w-xl font-medium leading-relaxed">
+            <p className="text-xs sm:text-base text-[#766050] max-w-xl font-medium leading-relaxed">
               Explore authentic bio pages built on Lookup. Notice the distinct spatial hierarchy, custom palettes, and tactile typography.
             </p>
           </div>
 
           {/* Creator Selector Pills */}
-          <div className="flex items-center bg-white border border-[#540B0E]/12 p-1 rounded-2xl shadow-xs self-start md:self-auto overflow-x-auto max-w-full">
+          <div className="flex items-center bg-white border border-[#540B0E]/12 p-1 rounded-2xl shadow-xs self-start md:self-auto overflow-x-auto max-w-full scrollbar-none">
             {REAL_CREATORS.map(creator => {
               const isActive = selectedCreator.id === creator.id;
               return (
@@ -149,7 +149,7 @@ export function RealBioShowcase() {
                   key={creator.id}
                   type="button"
                   onClick={() => setSelectedCreator(creator)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                     isActive
                       ? 'bg-[#540B0E] text-[#FFF3B0] shadow-xs'
                       : 'text-[#766050] hover:text-[#540B0E]'
@@ -163,11 +163,11 @@ export function RealBioShowcase() {
         </div>
 
         {/* ── REAL BIO PAGE FRAME ── */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           
           {/* Left Column: Creator Dossier & Specs */}
           <div className="lg:col-span-7 space-y-4 text-left order-2 lg:order-1">
-            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-[#540B0E]/12 shadow-sm space-y-4">
+            <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-[#540B0E]/12 shadow-sm space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#FAF7EE] text-[#540B0E] border border-[#540B0E]/10">
                   {selectedCreator.location}
@@ -178,7 +178,7 @@ export function RealBioShowcase() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-black text-[#540B0E] tracking-tight">{selectedCreator.name}</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#540B0E] tracking-tight">{selectedCreator.name}</h3>
                 <p className="text-xs font-medium text-[#766050] mt-0.5">{selectedCreator.title}</p>
               </div>
 
@@ -190,7 +190,7 @@ export function RealBioShowcase() {
               <div className="pt-2 border-t border-[#540B0E]/8 space-y-2 text-xs font-mono">
                 <div className="flex justify-between">
                   <span className="text-[#766050]">Spatial Layout:</span>
-                  <span className="font-bold text-[#540B0E]">{selectedCreator.layoutTag}</span>
+                  <span className="font-bold text-[#540B0E] text-right truncate pl-2">{selectedCreator.layoutTag}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#766050]">Palette:</span>
@@ -203,8 +203,8 @@ export function RealBioShowcase() {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 text-xs font-mono text-[#766050]">
-              <span className="w-2 h-2 rounded-full bg-[#E09F3E]" />
+            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono text-[#766050]">
+              <span className="w-2 h-2 rounded-full bg-[#E09F3E] flex-shrink-0" />
               <span>LIVE DEMO RUNNING ON EDGERUNTIME // 0.78S</span>
             </div>
           </div>

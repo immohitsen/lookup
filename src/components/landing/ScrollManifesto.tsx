@@ -85,9 +85,9 @@ export function ScrollManifesto() {
       {/* 
         Sticky Viewport Frame:
         Stays locked in place for the full 260vh scroll height.
-        No overflow: hidden on parent ancestors so sticky sticks cleanly.
+        Uses 100dvh for mobile viewport stabilization.
       */}
-      <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 pointer-events-none select-none">
+      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col items-center justify-center px-3.5 sm:px-8 lg:px-12 pointer-events-none select-none">
         
         {/* Subtle Ambient Radial Glow that intensifies as text illuminates */}
         <div
@@ -98,8 +98,8 @@ export function ScrollManifesto() {
         />
 
         {/* Top Monospaced Tag */}
-        <div className="mb-6 sm:mb-8 z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#540B0E]/12 text-xs font-mono font-bold text-[#540B0E] shadow-xs">
+        <div className="mb-4 sm:mb-8 z-10">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#540B0E]/12 text-xs font-mono font-bold text-[#540B0E] shadow-xs">
             <HugeiconsIcon icon={SparklesIcon} size={13} className="text-[#E09F3E]" />
             <span className="tracking-wider uppercase text-[10px] sm:text-xs">// 01 THE EDITORIAL STATEMENT</span>
           </div>
@@ -111,12 +111,12 @@ export function ScrollManifesto() {
           to full dark bordeaux or honey bronze as scrollProgress moves from 0 to 1.
         */}
         <div
-          className="max-w-4xl w-full mx-auto text-center z-10 transition-transform duration-75 will-change-transform"
+          className="max-w-4xl w-full mx-auto text-center z-10 transition-transform duration-75 will-change-transform px-1"
           style={{
             transform: `scale(${scale}) translateY(${translateY}px)`,
           }}
         >
-          <div className="flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-4 gap-y-2 sm:gap-y-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-4 gap-y-1.5 sm:gap-y-3">
             {MANIFESTO_WORDS.map((item, index) => {
               // Calculate word-level activation threshold
               const wordStart = (index / totalWords) * 0.85;
@@ -138,7 +138,7 @@ export function ScrollManifesto() {
               return (
                 <span
                   key={index}
-                  className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight transition-all duration-150 inline-block ${
+                  className={`text-xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight transition-all duration-150 inline-block ${
                     item.highlight && isIlluminated
                       ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#540B0E] via-[#9E2A2B] to-[#E09F3E]'
                       : isIlluminated

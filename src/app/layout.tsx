@@ -1,7 +1,14 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import '../styles/tokens.css';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#FAF7EE',
+};
 
 export const metadata: Metadata = {
   title: 'Lookup — The Premium Link in Bio',
