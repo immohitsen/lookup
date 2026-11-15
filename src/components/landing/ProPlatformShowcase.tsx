@@ -31,7 +31,7 @@ const PRESETS: ThemePreset[] = [
   {
     id: 'bordeaux',
     name: 'Bordeaux & Honey',
-    dotColor: '#540B0E',
+    dotColor: '#1C1A17',
     bg: '#140305',
     surface: '#240609',
     ink: '#FFF3B0',
@@ -61,17 +61,17 @@ const PRESETS: ThemePreset[] = [
   {
     id: 'linen',
     name: 'Champagne Linen',
-    dotColor: '#FAF7EE',
-    bg: '#FAF7EE',
+    dotColor: '#FAF8F3',
+    bg: '#FAF8F3',
     surface: '#FFFFFF',
-    ink: '#540B0E',
-    accent: '#540B0E',
+    ink: '#1C1A17',
+    accent: '#1C1A17',
     accentText: '#FFF3B0',
   },
 ];
 
 const QR_SWATCHES = [
-  { id: 'bordeaux', label: 'Bordeaux', hex: '#540B0E' },
+  { id: 'bordeaux', label: 'Bordeaux', hex: '#1C1A17' },
   { id: 'honey', label: 'Honey', hex: '#E09F3E' },
   { id: 'slate', label: 'Slate', hex: '#335C67' },
   { id: 'noir', label: 'Noir', hex: '#1B1B2F' },
@@ -89,31 +89,28 @@ export function ProPlatformShowcase() {
   }
 
   return (
-    <section id="platform" className="py-14 sm:py-28 bg-[#FAF7EE] border-b border-[#540B0E]/10 select-none relative overflow-hidden">
-      
-      {/* Background Subtle Ambient Radiance */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[350px] sm:w-[850px] h-[300px] sm:h-[500px] bg-gradient-to-r from-[#E09F3E]/12 via-[#540B0E]/6 to-[#335C67]/10 blur-[100px] sm:blur-[150px] rounded-full pointer-events-none" />
+    <section id="platform" className="py-14 sm:py-28 bg-[#FAF8F3] border-b border-[#1C1A17]/8 select-none relative overflow-hidden">
 
       <div className="max-w-6xl mx-auto px-3.5 sm:px-6 relative z-10 space-y-8 sm:space-y-12">
-        
+
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-3 sm:pb-4 border-b border-[#540B0E]/10 text-left">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-3 sm:pb-4 border-b border-[#1C1A17]/8 text-left">
           <div className="space-y-2 max-w-2xl">
-            <span className="text-[10px] sm:text-xs font-mono font-black uppercase tracking-wider text-[#E09F3E] flex items-center gap-1.5">
-              <HugeiconsIcon icon={SparklesIcon} size={14} />
-              // 01 EVERY PRO FEATURE • INCLUDED FREE
+            <span className="text-xs font-medium text-[#8A8379] flex items-center gap-1.5">
+              <HugeiconsIcon icon={SparklesIcon} size={14} className="text-[#E09F3E]" />
+              Every pro feature, included free
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#540B0E] tracking-tight leading-[1.15] sm:leading-[1.1]">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#1C1A17] tracking-[-0.02em] leading-[1.15] sm:leading-[1.1]">
               Everything you pay $15/month for elsewhere. Built in.
             </h2>
-            <p className="text-xs sm:text-base text-[#766050] font-medium leading-relaxed">
+            <p className="text-xs sm:text-base text-[#55504A] leading-[1.6]">
               Link scheduling, print-ready vector QR codes, direct fan newsletters, and daily performance telemetry — with zero paywalls and zero platform cuts.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 self-start md:self-auto px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/70 backdrop-blur-xl border border-white/80 shadow-xs text-[10px] sm:text-xs font-mono font-bold text-[#540B0E]">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>100% FIRST-PARTY ENGINE</span>
+          <div className="flex items-center gap-2 self-start md:self-auto px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white border border-[#1C1A17]/10 text-xs font-medium text-[#55504A]">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            <span>100% first-party engine</span>
           </div>
         </div>
 
@@ -124,18 +121,18 @@ export function ProPlatformShowcase() {
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="md:col-span-7 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 lg:p-9 bg-white/75 backdrop-blur-2xl border border-white/90 shadow-[0_20px_50px_rgba(84,11,14,0.06),0_1px_1px_rgba(255,255,255,0.9)_inset] relative overflow-hidden flex flex-col justify-between space-y-5 sm:space-y-6"
+            className="md:col-span-7 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 lg:p-9 bg-white border border-[#1C1A17]/8 shadow-[0_12px_30px_rgba(28,26,23,0.04)] relative overflow-hidden flex flex-col justify-between space-y-5 sm:space-y-6"
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#E09F3E] uppercase tracking-wider block">
-                  LUXURY DESIGN ENGINE
+                <span className="text-xs font-medium text-[#8A8379] block">
+                  Design engine
                 </span>
-                <h3 className="text-lg sm:text-xl font-black text-[#540B0E]">Tactile Themes & Custom Styling</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-[#1C1A17]">Tactile themes & custom styling</h3>
               </div>
 
               {/* Theme Picker Swatches */}
-              <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white border border-[#540B0E]/12 shadow-2xs self-start sm:self-auto">
+              <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white border border-[#1C1A17]/10 shadow-2xs self-start sm:self-auto">
                 {PRESETS.map((p) => {
                   const isSelected = selectedTheme.id === p.id;
                   return (
@@ -145,7 +142,7 @@ export function ProPlatformShowcase() {
                       onClick={() => setSelectedTheme(p)}
                       className={`w-6 h-6 rounded-xl border transition-all cursor-pointer flex items-center justify-center ${
                         isSelected
-                          ? 'border-[#540B0E] ring-2 ring-[#540B0E]/20 scale-105'
+                          ? 'border-[#1C1A17] ring-2 ring-[#1C1A17]/15 scale-105'
                           : 'border-transparent opacity-65 hover:opacity-100 hover:scale-105'
                       }`}
                       style={{ backgroundColor: p.dotColor }}
@@ -163,7 +160,7 @@ export function ProPlatformShowcase() {
               className="rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border shadow-inner transition-colors duration-500 space-y-3 sm:space-y-3.5"
               style={{
                 backgroundColor: selectedTheme.bg,
-                borderColor: 'rgba(84, 11, 14, 0.12)',
+                borderColor: 'rgba(28, 26, 23, 0.12)',
                 color: selectedTheme.ink,
               }}
             >
@@ -228,7 +225,7 @@ export function ProPlatformShowcase() {
               </div>
             </div>
 
-            <p className="text-xs text-[#766050] font-medium leading-relaxed">
+            <p className="text-xs text-[#55504A] font-medium leading-relaxed">
               Fully customizable luxury presets, custom hex pickers, and glassmorphic button styles. No Linktree branding badge forced onto your page.
             </p>
           </motion.div>
@@ -237,45 +234,45 @@ export function ProPlatformShowcase() {
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="md:col-span-5 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 lg:p-9 bg-white/75 backdrop-blur-2xl border border-white/90 shadow-[0_20px_50px_rgba(84,11,14,0.06),0_1px_1px_rgba(255,255,255,0.9)_inset] relative overflow-hidden flex flex-col justify-between space-y-5 sm:space-y-6"
+            className="md:col-span-5 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 lg:p-9 bg-white border border-[#1C1A17]/8 shadow-[0_12px_30px_rgba(28,26,23,0.04)] relative overflow-hidden flex flex-col justify-between space-y-5 sm:space-y-6"
           >
             <div>
               <div className="flex items-center justify-between mb-2">
-                <div className="w-10 h-10 rounded-2xl bg-[#E09F3E]/20 text-[#540B0E] border border-[#E09F3E]/40 flex items-center justify-center shadow-xs">
+                <div className="w-10 h-10 rounded-2xl bg-[#E09F3E]/20 text-[#1C1A17] border border-[#E09F3E]/40 flex items-center justify-center shadow-xs">
                   <HugeiconsIcon icon={Calendar01Icon} size={20} />
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-[#E09F3E]/15 text-[#540B0E] font-mono text-[10px] font-black uppercase">
-                  Flagship Feature
+                <span className="px-2.5 py-1 rounded-full bg-[#E09F3E]/15 text-[#1C1A17] text-xs font-medium">
+                  Flagship feature
                 </span>
               </div>
-              <span className="text-[10px] font-mono font-bold text-[#E09F3E] uppercase tracking-wider block">
-                TIMED RELEASES
+              <span className="text-xs font-medium text-[#8A8379] block">
+                Timed releases
               </span>
-              <h3 className="text-lg sm:text-xl font-black text-[#540B0E]">Link Scheduling & Expiration</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-[#1C1A17]">Link scheduling & expiration</h3>
             </div>
 
             {/* Interactive Schedule Mockup */}
-            <div className="p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl bg-[#FAF7EE] border border-[#540B0E]/10 space-y-2.5 sm:space-y-3 shadow-inner">
+            <div className="p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl bg-[#FAF8F3] border border-[#1C1A17]/10 space-y-2.5 sm:space-y-3 shadow-inner">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#540B0E]">Limited Drop Campaign</span>
+                <span className="text-xs font-bold text-[#1C1A17]">Limited Drop Campaign</span>
                 <span className="text-[9px] sm:text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200">
                   Live Scheduled
                 </span>
               </div>
 
               <div className="grid grid-cols-2 gap-2 text-[9px] sm:text-[10px] font-mono">
-                <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#540B0E]/8 min-w-0">
-                  <span className="text-[#766050] block text-[8px] sm:text-[9px]">Publish Start:</span>
-                  <span className="font-bold text-[#540B0E] truncate block">Nov 10, 09:00 AM</span>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#1C1A17]/8 min-w-0">
+                  <span className="text-[#55504A] block text-[8px] sm:text-[9px]">Publish Start:</span>
+                  <span className="font-bold text-[#1C1A17] truncate block">Nov 10, 09:00 AM</span>
                 </div>
-                <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#540B0E]/8 min-w-0">
-                  <span className="text-[#766050] block text-[8px] sm:text-[9px]">Auto Expire:</span>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#1C1A17]/8 min-w-0">
+                  <span className="text-[#55504A] block text-[8px] sm:text-[9px]">Auto Expire:</span>
                   <span className="font-bold text-[#9E2A2B] truncate block">Nov 15, 11:59 PM</span>
                 </div>
               </div>
             </div>
 
-            <p className="text-xs text-[#766050] font-medium leading-relaxed">
+            <p className="text-xs text-[#55504A] font-medium leading-relaxed">
               Schedule links for album drops, limited merchandise runs, and tour dates. Links appear and vanish automatically without manual editing.
             </p>
           </motion.div>
@@ -284,23 +281,23 @@ export function ProPlatformShowcase() {
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="md:col-span-4 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 bg-white/75 backdrop-blur-2xl border border-white/90 shadow-[0_20px_50px_rgba(84,11,14,0.06),0_1px_1px_rgba(255,255,255,0.9)_inset] relative overflow-hidden flex flex-col justify-between space-y-4 sm:space-y-5"
+            className="md:col-span-4 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 bg-white border border-[#1C1A17]/8 shadow-[0_12px_30px_rgba(28,26,23,0.04)] relative overflow-hidden flex flex-col justify-between space-y-4 sm:space-y-5"
           >
             <div className="space-y-2">
               <div className="w-10 h-10 rounded-2xl bg-[#335C67]/15 text-[#335C67] border border-[#335C67]/30 flex items-center justify-center shadow-xs">
                 <HugeiconsIcon icon={QrCodeIcon} size={20} />
               </div>
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#766050] uppercase tracking-wider block">
-                  ZERO 3RD PARTY APIS
+                <span className="text-xs font-medium text-[#8A8379] block">
+                  Zero third-party APIs
                 </span>
-                <h3 className="text-lg font-black text-[#540B0E]">Vector QR Studio</h3>
+                <h3 className="text-lg font-bold text-[#1C1A17]">Vector QR studio</h3>
               </div>
             </div>
 
             {/* QR Code Container */}
-            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAF7EE] border border-[#540B0E]/10 flex flex-col items-center justify-center space-y-3">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 bg-white rounded-2xl border border-[#540B0E]/10 shadow-xs flex items-center justify-center">
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F3] border border-[#1C1A17]/10 flex flex-col items-center justify-center space-y-3">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 bg-white rounded-2xl border border-[#1C1A17]/10 shadow-xs flex items-center justify-center">
                 <HugeiconsIcon icon={QrCodeIcon} size={60} style={{ color: selectedQrColor }} />
               </div>
 
@@ -313,7 +310,7 @@ export function ProPlatformShowcase() {
                     onClick={() => setSelectedQrColor(sw.hex)}
                     className={`w-5 h-5 rounded-lg border transition-all cursor-pointer ${
                       selectedQrColor === sw.hex
-                        ? 'border-[#540B0E] ring-2 ring-[#540B0E]/30 scale-110'
+                        ? 'border-[#1C1A17] ring-2 ring-[#1C1A17]/30 scale-110'
                         : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                     style={{ backgroundColor: sw.hex }}
@@ -322,9 +319,9 @@ export function ProPlatformShowcase() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-[10px] font-mono text-[#540B0E] font-bold border-t border-[#540B0E]/8 pt-3">
-              <span className="px-2 py-0.5 rounded bg-[#FAF7EE] border border-[#540B0E]/10">SVG Vector</span>
-              <span className="px-2 py-0.5 rounded bg-[#FAF7EE] border border-[#540B0E]/10">1024px Print PNG</span>
+            <div className="flex items-center gap-2 text-xs text-[#55504A] font-medium border-t border-[#1C1A17]/8 pt-3">
+              <span className="px-2 py-0.5 rounded bg-[#FAF8F3] border border-[#1C1A17]/10">SVG vector</span>
+              <span className="px-2 py-0.5 rounded bg-[#FAF8F3] border border-[#1C1A17]/10">1024px print PNG</span>
             </div>
           </motion.div>
 
@@ -332,28 +329,28 @@ export function ProPlatformShowcase() {
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="md:col-span-4 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 bg-white/75 backdrop-blur-2xl border border-white/90 shadow-[0_20px_50px_rgba(84,11,14,0.06),0_1px_1px_rgba(255,255,255,0.9)_inset] relative overflow-hidden flex flex-col justify-between space-y-4 sm:space-y-5"
+            className="md:col-span-4 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 bg-white border border-[#1C1A17]/8 shadow-[0_12px_30px_rgba(28,26,23,0.04)] relative overflow-hidden flex flex-col justify-between space-y-4 sm:space-y-5"
           >
             <div className="space-y-2">
-              <div className="w-10 h-10 rounded-2xl bg-[#540B0E]/10 text-[#540B0E] border border-[#540B0E]/20 flex items-center justify-center shadow-xs">
+              <div className="w-10 h-10 rounded-2xl bg-[#1C1A17]/10 text-[#1C1A17] border border-[#1C1A17]/20 flex items-center justify-center shadow-xs">
                 <HugeiconsIcon icon={ChartHistogramIcon} size={20} />
               </div>
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#766050] uppercase tracking-wider block">
-                  ZERO TRACKER COOKIES
+                <span className="text-xs font-medium text-[#8A8379] block">
+                  Zero tracker cookies
                 </span>
-                <h3 className="text-lg font-black text-[#540B0E]">Performance Telemetry</h3>
+                <h3 className="text-lg font-bold text-[#1C1A17]">Performance telemetry</h3>
               </div>
             </div>
 
             {/* Mini Sparkline Chart Mockup */}
-            <div className="p-3 sm:p-3.5 rounded-2xl bg-[#FAF7EE] border border-[#540B0E]/10 space-y-2">
-              <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-mono font-bold">
-                <span className="text-[#E09F3E] flex items-center gap-1">
-                  <HugeiconsIcon icon={EyeIcon} size={12} /> 14.8K Views
+            <div className="p-3 sm:p-3.5 rounded-2xl bg-[#FAF8F3] border border-[#1C1A17]/10 space-y-2">
+              <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-medium">
+                <span className="text-[#1C1A17] flex items-center gap-1">
+                  <HugeiconsIcon icon={EyeIcon} size={12} className="text-[#8A8379]" /> 14.8K views
                 </span>
-                <span className="text-[#540B0E] flex items-center gap-1">
-                  <HugeiconsIcon icon={CursorPointer01Icon} size={12} /> 4.2K Clicks
+                <span className="text-[#1C1A17] flex items-center gap-1">
+                  <HugeiconsIcon icon={CursorPointer01Icon} size={12} className="text-[#8A8379]" /> 4.2K clicks
                 </span>
               </div>
 
@@ -365,13 +362,13 @@ export function ProPlatformShowcase() {
                     className="flex-1 rounded-t-sm sm:rounded-t-md transition-all duration-300"
                     style={{
                       height: `${val}%`,
-                      backgroundColor: i % 2 === 0 ? '#E09F3E' : '#540B0E',
+                      backgroundColor: i % 2 === 0 ? '#E09F3E' : '#1C1A17',
                     }}
                   />
                 ))}
               </div>
 
-              <div className="flex items-center justify-between text-[8px] sm:text-[9px] font-mono text-[#766050] border-t border-[#540B0E]/8 pt-1.5">
+              <div className="flex items-center justify-between text-[9px] text-[#8A8379] border-t border-[#1C1A17]/8 pt-1.5">
                 <span>🇺🇸 42%</span>
                 <span>🇬🇧 28%</span>
                 <span>🇩🇪 16%</span>
@@ -379,7 +376,7 @@ export function ProPlatformShowcase() {
               </div>
             </div>
 
-            <p className="text-xs text-[#766050] font-medium leading-relaxed border-t border-[#540B0E]/8 pt-3">
+            <p className="text-xs text-[#55504A] font-medium leading-relaxed border-t border-[#1C1A17]/8 pt-3">
               Daily trendline sparklines, device distribution, and country breakdown. Self-hosted in your database with no cookies.
             </p>
           </motion.div>
@@ -388,36 +385,36 @@ export function ProPlatformShowcase() {
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="md:col-span-4 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 bg-white/75 backdrop-blur-2xl border border-white/90 shadow-[0_20px_50px_rgba(84,11,14,0.06),0_1px_1px_rgba(255,255,255,0.9)_inset] relative overflow-hidden flex flex-col justify-between space-y-4 sm:space-y-5"
+            className="md:col-span-4 rounded-[26px] sm:rounded-[36px] p-5 sm:p-7 bg-white border border-[#1C1A17]/8 shadow-[0_12px_30px_rgba(28,26,23,0.04)] relative overflow-hidden flex flex-col justify-between space-y-4 sm:space-y-5"
           >
             <div className="space-y-2">
               <div className="w-10 h-10 rounded-2xl bg-[#9E2A2B]/15 text-[#9E2A2B] border border-[#9E2A2B]/30 flex items-center justify-center shadow-xs">
                 <HugeiconsIcon icon={Mail01Icon} size={20} />
               </div>
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#766050] uppercase tracking-wider block">
-                  100% CREATOR OWNED
+                <span className="text-xs font-medium text-[#8A8379] block">
+                  100% creator owned
                 </span>
-                <h3 className="text-lg font-black text-[#540B0E]">Direct Fan Newsletter</h3>
+                <h3 className="text-lg font-bold text-[#1C1A17]">Direct fan newsletter</h3>
               </div>
             </div>
 
-            <div className="p-3 sm:p-3.5 rounded-2xl bg-[#FAF7EE] border border-[#540B0E]/10 space-y-2 sm:space-y-2.5">
-              <div className="flex items-center justify-between text-xs font-mono font-bold">
-                <span className="text-[#540B0E]">SUBSCRIBER VAULT</span>
-                <span className="text-emerald-700">0% TAX</span>
+            <div className="p-3 sm:p-3.5 rounded-2xl bg-[#FAF8F3] border border-[#1C1A17]/10 space-y-2 sm:space-y-2.5">
+              <div className="flex items-center justify-between text-xs font-semibold">
+                <span className="text-[#1C1A17]">Subscriber vault</span>
+                <span className="text-emerald-700">0% tax</span>
               </div>
-              <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#540B0E]/8 text-[10px] sm:text-[11px] font-mono text-[#540B0E] flex items-center justify-between">
+              <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#1C1A17]/8 text-[10px] sm:text-[11px] text-[#1C1A17] flex items-center justify-between">
                 <span className="truncate">fan@domain.com</span>
-                <span className="text-emerald-600 font-bold flex-shrink-0 ml-1">✓ Saved</span>
+                <span className="text-emerald-600 font-semibold flex-shrink-0 ml-1">✓ Saved</span>
               </div>
-              <div className="text-[10px] text-[#766050] flex items-center justify-between">
-                <span>Honeypot Spam Guard</span>
-                <span className="font-bold text-[#540B0E]">CSV Export</span>
+              <div className="text-[10px] text-[#55504A] flex items-center justify-between">
+                <span>Honeypot spam guard</span>
+                <span className="font-semibold text-[#1C1A17]">CSV export</span>
               </div>
             </div>
 
-            <p className="text-xs text-[#766050] font-medium leading-relaxed border-t border-[#540B0E]/8 pt-3">
+            <p className="text-xs text-[#55504A] font-medium leading-relaxed border-t border-[#1C1A17]/8 pt-3">
               Collect emails directly on your bio page with honeypot bot defense. Export your subscriber list in one click anytime.
             </p>
           </motion.div>

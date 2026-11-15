@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm src/components/landing/AppleGlassShowcase.tsx src/components/landing/BentoHeroCanvas.tsx src/components/landing/CuteMascot.tsx src/components/landing/LayoutShowcase.tsx src/components/landing/LiveStripSandbox.tsx src/components/landing/PixelCat.tsx)",
+      "Bash(npm uninstall *)",
+      "Bash(npx tsc *)",
+      "Bash(timeout 60 bash -c 'until curl -sf http://localhost:3000 >/dev/null; do sleep 1; done')",
+      "Bash(npm ls *)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(npx --yes playwright@latest --version)"
+    ],
+    "additionalDirectories": [
+      "D:\\WWW\\Projects\\lookup\\src\\components\\landing"
+    ]
+  }
+}

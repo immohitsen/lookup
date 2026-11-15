@@ -21,70 +21,70 @@ interface FeatureCard {
 
 const FEATURES: FeatureCard[] = [
   {
-    kicker: '// 01 SPATIAL ARCHITECTURE',
-    title: '3 Distinct Spatial Formats',
-    desc: 'Break free from single-column vertical lists. Choose between 2-column spatial Bento mosaics, numbered Haute Editorial publication indices, and classic focus streams in one click.',
+    kicker: 'Spatial architecture',
+    title: '3 distinct spatial formats',
+    desc: 'Break free from single-column vertical lists. Choose between 2-column spatial Bento mosaics, numbered editorial publication indices, and classic focus streams in one click.',
     icon: Layers01Icon,
     badge: 'Bento • Editorial • Stack',
-    tagColor: 'text-[#E09F3E]',
+    tagColor: 'text-[#8A8379]',
   },
   {
-    kicker: '// 02 AUDIENCE SOVEREIGNTY',
-    title: '0% Cut Fan Email Capture',
+    kicker: 'Audience ownership',
+    title: '0% cut fan email capture',
     desc: 'Capture fan emails directly on your strip with automated honeypot spam protection. Download clean CSV lists anytime with zero platform commissions or middleman taxes.',
     icon: Mail01Icon,
-    badge: '100% Creator Owned',
+    badge: '100% creator owned',
     tagColor: 'text-emerald-700',
   },
   {
-    kicker: '// 03 VECTOR PRINT READY',
-    title: 'Dynamic Vector QR Studio',
+    kicker: 'Vector print ready',
+    title: 'Dynamic vector QR studio',
     desc: 'Generate infinite-resolution vector SVG and high-resolution print PNG QR codes on the fly. Perfectly scaled for album packaging, exhibition merchandise, and concert flyers.',
     icon: QrCodeIcon,
     badge: 'Vector SVG + PNG',
-    tagColor: 'text-[#335C67]',
+    tagColor: 'text-[#8A8379]',
   },
   {
-    kicker: '// 04 EDGE PERFORMANCE',
-    title: 'Sub-Second 0.78s TTFB',
+    kicker: 'Edge performance',
+    title: 'Sub-second 0.78s TTFB',
     desc: 'Built on Next.js 16 edge runtime with minimal DOM overhead. Pages load instantly on cellular networks worldwide without heavy third-party tracking bloat or cookie banners.',
     icon: FlashIcon,
-    badge: 'Global Edge Network',
-    tagColor: 'text-[#9E2A2B]',
+    badge: 'Global edge network',
+    tagColor: 'text-[#8A8379]',
   },
   {
-    kicker: '// 05 PROCEDURAL IDENTITY',
-    title: '16 Procedural 3D Avatars',
+    kicker: 'Procedural identity',
+    title: '16 procedural 3D avatars',
     desc: 'Pick from curated 3D robotic, stylized, and human busts, or roll procedural seeds with our interactive generator. Alternatively, link high-res photos or Unsplash portraits.',
     icon: SparklesIcon,
-    badge: 'Procedural 3D Art',
-    tagColor: 'text-[#E09F3E]',
+    badge: 'Procedural 3D art',
+    tagColor: 'text-[#8A8379]',
   },
   {
-    kicker: '// 06 LUXURY ATMOSPHERE',
-    title: 'Tailored 5-Color Palettes',
-    desc: 'Bordeaux wine noir, honey bronze, petroleum slate, and warm linen paper. Add ambient halo backlights that cast a luminous soft underglow beneath your link cards.',
+    kicker: 'Custom palettes',
+    title: 'Tailored 5-color palettes',
+    desc: 'Bordeaux wine noir, honey bronze, petroleum slate, and warm linen paper — pick a palette that fits your page and switch anytime.',
     icon: ChartHistogramIcon,
-    badge: 'Ambient Halo Glow',
-    tagColor: 'text-[#540B0E]',
+    badge: 'Custom themes',
+    tagColor: 'text-[#8A8379]',
   },
 ];
 
 export function EditorialFeatures() {
   return (
-    <section id="features" className="py-14 sm:py-28 bg-[#FAF7EE] border-b border-[#540B0E]/10">
+    <section id="features" className="py-14 sm:py-28 bg-[#FAF8F3] border-b border-[#1C1A17]/10">
       <div className="max-w-6xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-12 text-left">
         
         {/* Section Header */}
         <div className="space-y-2 sm:space-y-3">
-          <span className="text-[10px] sm:text-xs font-mono font-black uppercase tracking-wider text-[#E09F3E] flex items-center gap-1.5">
-            <HugeiconsIcon icon={SparklesIcon} size={14} />
-            // 05 CAPABILITIES ARCHITECTURE
+          <span className="text-xs font-medium text-[#8A8379] flex items-center gap-1.5">
+            <HugeiconsIcon icon={SparklesIcon} size={14} className="text-[#E09F3E]" />
+            Capabilities
           </span>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#540B0E] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#1C1A17] tracking-[-0.02em]">
             Designed for uncompromised autonomy.
           </h2>
-          <p className="text-xs sm:text-base text-[#766050] max-w-2xl font-medium leading-relaxed">
+          <p className="text-xs sm:text-base text-[#55504A] max-w-2xl leading-[1.6]">
             Every feature on Lookup is engineered to give creators aesthetic distinction and total independence — without paywalls, watermark badges, or middleman fees.
           </p>
         </div>
@@ -96,53 +96,53 @@ export function EditorialFeatures() {
             return (
               <div
                 key={idx}
-                className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-[#540B0E]/12 shadow-sm space-y-4 hover:border-[#E09F3E]/60 transition-all flex flex-col justify-between group"
+                className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-[#1C1A17]/12 shadow-sm space-y-4 hover:border-[#E09F3E]/60 transition-all flex flex-col justify-between group"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#FAF7EE] border border-[#540B0E]/12 flex items-center justify-center text-[#540B0E] group-hover:scale-105 transition-transform shadow-2xs">
-                      <HugeiconsIcon icon={Icon} size={18} className="text-[#540B0E]" />
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#FAF8F3] border border-[#1C1A17]/12 flex items-center justify-center text-[#1C1A17] group-hover:scale-105 transition-transform shadow-2xs">
+                      <HugeiconsIcon icon={Icon} size={18} className="text-[#1C1A17]" />
                     </div>
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#FAF7EE] text-[#540B0E] border border-[#540B0E]/10">
+                    <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#FAF8F3] text-[#55504A] border border-[#1C1A17]/10">
                       {feat.badge}
                     </span>
                   </div>
 
                   <div>
-                    <span className={`text-[10px] font-mono font-black uppercase tracking-wider ${feat.tagColor}`}>
+                    <span className={`text-xs font-medium ${feat.tagColor}`}>
                       {feat.kicker}
                     </span>
-                    <h3 className="text-base sm:text-lg font-black text-[#540B0E] mt-0.5 tracking-tight">
+                    <h3 className="text-base sm:text-lg font-bold text-[#1C1A17] mt-0.5 tracking-[-0.01em]">
                       {feat.title}
                     </h3>
                   </div>
 
-                  <p className="text-xs text-[#766050] leading-relaxed font-normal">
+                  <p className="text-xs text-[#55504A] leading-[1.6]">
                     {feat.desc}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#540B0E]/8 flex items-center gap-1.5 text-xs text-[#540B0E] font-bold">
+                <div className="pt-3 border-t border-[#1C1A17]/8 flex items-center gap-1.5 text-xs text-[#1C1A17] font-medium">
                   <HugeiconsIcon icon={Tick01Icon} size={14} className="text-emerald-700 flex-shrink-0" />
-                  <span className="font-mono text-[11px]">INCLUDED FREE</span>
+                  <span>Included free</span>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Bottom Editorial Trust Bar */}
-        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#540B0E]/10 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs font-mono text-[#766050] text-center sm:text-left">
+        {/* Bottom Trust Bar */}
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#1C1A17]/10 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#55504A] text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-            <span className="font-bold text-[#540B0E]">100% FREE CREATOR TOOLKIT</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-600" />
+            <span className="font-semibold text-[#1C1A17]">100% free creator toolkit</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-[11px]">
-            <span>NO CREDIT CARD REQUIRED</span>
-            <span className="hidden sm:inline">•</span>
-            <span>0% FEES TAKEN</span>
-            <span className="hidden sm:inline">•</span>
-            <span>INSTANT DEPLOYMENT</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[11px]">
+            <span>No credit card required</span>
+            <span className="hidden sm:inline">·</span>
+            <span>0% fees taken</span>
+            <span className="hidden sm:inline">·</span>
+            <span>Instant deployment</span>
           </div>
         </div>
 

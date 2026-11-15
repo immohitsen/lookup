@@ -79,7 +79,7 @@ export function ScrollManifesto() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[260vh] bg-[#FAF7EE] border-b border-[#540B0E]/10"
+      className="relative min-h-[260vh] bg-[#FAF8F3] border-b border-[#1C1A17]/8"
       aria-label="Lookup Kinetic Manifesto"
     >
       {/* 
@@ -87,21 +87,13 @@ export function ScrollManifesto() {
         Stays locked in place for the full 260vh scroll height.
         Uses 100dvh for mobile viewport stabilization.
       */}
-      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col items-center justify-center px-3.5 sm:px-8 lg:px-12 pointer-events-none select-none">
+      <div className="sticky top-0 h-[100dvh] w-full flex flex-col items-center justify-center px-3.5 sm:px-8 lg:px-12 pointer-events-none select-none">
         
-        {/* Subtle Ambient Radial Glow that intensifies as text illuminates */}
-        <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-300"
-          style={{
-            background: `radial-gradient(ellipse 65% 55% at 50% 50%, rgba(224, 159, 62, ${0.05 + scrollProgress * 0.18}) 0%, rgba(250, 247, 238, 0) 70%)`,
-          }}
-        />
-
-        {/* Top Monospaced Tag */}
+        {/* Top Tag */}
         <div className="mb-4 sm:mb-8 z-10">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#540B0E]/12 text-xs font-mono font-bold text-[#540B0E] shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#1C1A17]/10 text-xs font-medium text-[#55504A] shadow-xs">
             <HugeiconsIcon icon={SparklesIcon} size={13} className="text-[#E09F3E]" />
-            <span className="tracking-wider uppercase text-[10px] sm:text-xs">// 01 THE EDITORIAL STATEMENT</span>
+            <span>The editorial statement</span>
           </div>
         </div>
 
@@ -138,12 +130,12 @@ export function ScrollManifesto() {
               return (
                 <span
                   key={index}
-                  className={`text-xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight transition-all duration-150 inline-block ${
+                  className={`text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] inline-block ${
                     item.highlight && isIlluminated
-                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#540B0E] via-[#9E2A2B] to-[#E09F3E]'
+                      ? 'text-[#E09F3E]'
                       : isIlluminated
-                      ? 'text-[#540B0E]'
-                      : 'text-[#540B0E]/20'
+                      ? 'text-[#1C1A17]'
+                      : 'text-[#1C1A17]/20'
                   }`}
                   style={{
                     opacity: wordOpacity,

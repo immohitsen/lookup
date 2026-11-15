@@ -98,9 +98,9 @@ const REAL_CREATORS: CreatorBio[] = [
     location: 'PARIS // COPENHAGEN',
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=240&h=240&fit=crop&crop=face',
     themeName: 'Vanilla Custard',
-    paletteBg: '#FAF7EE',
+    paletteBg: '#FAF8F3',
     paletteSurface: '#FFFFFF',
-    paletteInk: '#540B0E',
+    paletteInk: '#1C1A17',
     paletteAccent: '#E09F3E',
     layoutTag: 'Linen Classic Stack with Ambient Halo',
     bio: 'Designing tactile physical computing devices and minimalist studio hardware. Former Studio Lead at Teenage Engineering.',
@@ -122,26 +122,26 @@ export function RealBioShowcase() {
   const [selectedCreator, setSelectedCreator] = useState<CreatorBio>(REAL_CREATORS[0]);
 
   return (
-    <section id="showcase" className="py-14 sm:py-24 bg-[#FAF7EE] border-b border-[#540B0E]/10">
+    <section id="showcase" className="py-14 sm:py-24 bg-[#FAF8F3] border-b border-[#1C1A17]/10">
       <div className="max-w-6xl mx-auto px-3.5 sm:px-6 space-y-6 sm:space-y-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-2 border-b border-[#540B0E]/10 text-left">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-2 border-b border-[#1C1A17]/10 text-left">
           <div className="space-y-2">
-            <span className="text-[10px] sm:text-xs font-mono font-black uppercase tracking-wider text-[#E09F3E] flex items-center gap-1.5">
-              <HugeiconsIcon icon={SparklesIcon} size={14} />
-              // 02 REAL BIO PAGES
+            <span className="text-xs font-medium text-[#8A8379] flex items-center gap-1.5">
+              <HugeiconsIcon icon={SparklesIcon} size={14} className="text-[#E09F3E]" />
+              Real bio pages
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#540B0E] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#1C1A17] tracking-[-0.02em]">
               Crafted by real creators.
             </h2>
-            <p className="text-xs sm:text-base text-[#766050] max-w-xl font-medium leading-relaxed">
+            <p className="text-xs sm:text-base text-[#55504A] max-w-xl leading-[1.6]">
               Explore authentic bio pages built on Lookup. Notice the distinct spatial hierarchy, custom palettes, and tactile typography.
             </p>
           </div>
 
           {/* Creator Selector Pills */}
-          <div className="flex items-center bg-white border border-[#540B0E]/12 p-1 rounded-2xl shadow-xs self-start md:self-auto overflow-x-auto max-w-full scrollbar-none">
+          <div className="flex items-center bg-white border border-[#1C1A17]/12 p-1 rounded-2xl shadow-xs self-start md:self-auto overflow-x-auto max-w-full scrollbar-none">
             {REAL_CREATORS.map(creator => {
               const isActive = selectedCreator.id === creator.id;
               return (
@@ -151,8 +151,8 @@ export function RealBioShowcase() {
                   onClick={() => setSelectedCreator(creator)}
                   className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? 'bg-[#540B0E] text-[#FFF3B0] shadow-xs'
-                      : 'text-[#766050] hover:text-[#540B0E]'
+                      ? 'bg-[#1C1A17] text-[#FAF8F3] shadow-xs'
+                      : 'text-[#55504A] hover:text-[#1C1A17]'
                   }`}
                 >
                   {creator.name}
@@ -167,9 +167,9 @@ export function RealBioShowcase() {
           
           {/* Left Column: Creator Dossier & Specs */}
           <div className="lg:col-span-7 space-y-4 text-left order-2 lg:order-1">
-            <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-[#540B0E]/12 shadow-sm space-y-4">
+            <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-[#1C1A17]/12 shadow-sm space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#FAF7EE] text-[#540B0E] border border-[#540B0E]/10">
+                <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#FAF8F3] text-[#1C1A17] border border-[#1C1A17]/10">
                   {selectedCreator.location}
                 </span>
                 <span className="text-xs font-mono font-bold text-[#E09F3E]">
@@ -178,34 +178,34 @@ export function RealBioShowcase() {
               </div>
 
               <div>
-                <h3 className="text-xl sm:text-2xl font-black text-[#540B0E] tracking-tight">{selectedCreator.name}</h3>
-                <p className="text-xs font-medium text-[#766050] mt-0.5">{selectedCreator.title}</p>
+                <h3 className="text-xl sm:text-2xl font-black text-[#1C1A17] tracking-tight">{selectedCreator.name}</h3>
+                <p className="text-xs font-medium text-[#55504A] mt-0.5">{selectedCreator.title}</p>
               </div>
 
-              <p className="text-xs text-[#766050] leading-relaxed">
+              <p className="text-xs text-[#55504A] leading-relaxed">
                 {selectedCreator.bio}
               </p>
 
               {/* Specs Breakdown */}
-              <div className="pt-2 border-t border-[#540B0E]/8 space-y-2 text-xs font-mono">
+              <div className="pt-2 border-t border-[#1C1A17]/8 space-y-2 text-xs font-mono">
                 <div className="flex justify-between">
-                  <span className="text-[#766050]">Spatial Layout:</span>
-                  <span className="font-bold text-[#540B0E] text-right truncate pl-2">{selectedCreator.layoutTag}</span>
+                  <span className="text-[#55504A]">Spatial Layout:</span>
+                  <span className="font-bold text-[#1C1A17] text-right truncate pl-2">{selectedCreator.layoutTag}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#766050]">Palette:</span>
-                  <span className="font-bold text-[#540B0E]">{selectedCreator.themeName}</span>
+                  <span className="text-[#55504A]">Palette:</span>
+                  <span className="font-bold text-[#1C1A17]">{selectedCreator.themeName}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#766050]">Commission Fee:</span>
+                  <span className="text-[#55504A]">Commission Fee:</span>
                   <span className="font-bold text-emerald-700">0% (Keep 100%)</span>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono text-[#766050]">
+            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs text-[#8A8379]">
               <span className="w-2 h-2 rounded-full bg-[#E09F3E] flex-shrink-0" />
-              <span>LIVE DEMO RUNNING ON EDGERUNTIME // 0.78S</span>
+              <span>Live demo running on the edge — 0.78s</span>
             </div>
           </div>
 
@@ -215,7 +215,7 @@ export function RealBioShowcase() {
               
               {/* Outer Phone/Display Hardware Shell */}
               <div
-                className="rounded-[34px] p-3.5 sm:p-4 border-[3px] border-[#540B0E] shadow-[0_20px_50px_-12px_rgba(84,11,14,0.28)] transition-all duration-500 overflow-hidden"
+                className="rounded-[34px] p-3.5 sm:p-4 border-[3px] border-[#1C1A17] shadow-[0_20px_50px_-12px_rgba(84,11,14,0.28)] transition-all duration-500 overflow-hidden"
                 style={{ backgroundColor: selectedCreator.paletteBg, color: selectedCreator.paletteInk }}
               >
                 {/* Speaker Notch */}
